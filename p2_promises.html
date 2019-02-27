@@ -4,6 +4,76 @@
     <meta charset="UTF-8">
     <title>using promises</title>
 
+    <script>
+        function main() {
+
+            //new promise obj using constructor
+            return new Promise(function (resolve,reject) {
+
+                setTimeout(function (){
+
+                    const value = 1000;
+                    resolve(value);
+
+
+
+                },5000);
+
+
+            })
+        }//end main f
+
+//we call main and main returns an obj promise.we assign it to another varialble
+        //do some calculations
+
+        const promise = main();
+
+        promise.then(function (amount) {
+
+
+            console.log(amount*20/100);
+
+
+            //output will be displayed
+        })
+
+
+
+
+
+
+        function exec() {
+
+            const promise = main();
+
+            let total = 0;
+
+            promise.then(function (amount) {
+                total+=amount;
+                return main();
+
+
+            }).then(function (amount) {
+                total+=amount;
+                return main()
+
+            }).then(function (amount) {
+                total+=amount;
+                return total;
+
+
+            }).then(function (value) {
+                console.log(value)
+
+            });
+
+
+        }
+
+        exec(); //answer should be 3000 and it takes some time to display :D
+
+    </script>
+
 
 
 
