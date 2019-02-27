@@ -20,7 +20,8 @@
 
             },5000);
 
-        }//func main end
+        }
+        //func main end
 
         //we need to use that value var //to do it we will call the main func with a callback
         //it should return a value
@@ -31,11 +32,58 @@
 
         //=================================================================================================
 
+        //2nd method to execute main
+
+
+      const cal= function (amount) {
+          console.log(amount*20/100)
+
+
+      };
+      main(cal);
+
+
+
+      const totalCal = function (amount) {
+          console.log(amount*20/100);
+
+
+          let total = amount ;//total is about to change
+
+
+          function f (amount){
+
+              return total+=amount;
+              function f(amount) {
+                  return  total+=amount;
+                  function f(amount) {
+                    return total+=amount;
+
+
+                  }
+              }
+          }
+
+          console.log(total);
+
+
+
+
+
+
+
+
+      };
+
+      main(totalCal);
+
+
 
 
 
 
     </script>
+
 
 
 
