@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AF lec 3</title>
+
+    <script>
+
+        //callback function
+
+        function main(callback) {
+
+            //setting timeout function to 5s
+
+            setTimeout(function () {
+
+                const value = 1000; //we make it constant becouse this will not be a global var
+                //do some calculations inside function
+                callback(value);
+
+            },5000);
+
+        }//func main end
+
+        //we need to use that value var //to do it we will call the main func with a callback
+        //it should return a value
+        main(function(amount){
+            console.log(amount*20/100)
+
+        });
+
+        //=================================================================================================
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+</head>
+<body>
+
+</body>
+</html>
